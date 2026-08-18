@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hangman FYP Project</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-container">
+    <h1>HANGMAN</h1>
+    <!-- SVG Drawing-->
+    <div class="drawing-container">
+      <svg height="220" width="180" viewBox="0 0 180 220" class="hangman-svg">
+        <!-- Gallows -->
+        <line x1="10" y1="200" x2="150" y2="200" class="hanger" />
+        <line x1="30" y1="200" x2="30" y2="20" class="hanger" />
+        <line x1="30" y1="20" x2="110" y2="20" class="hanger" />
+        <line x1="110" y1="20" x2="110" y2="45" class="hanger" />
+
+        <!-- Stick Figure Parts -->
+        <circle cx="110" cy="65" r="20" class="body-part" id="part-head" />
+        <line x1="110" y1="85" x2="110" y2="140" class="body-part" id="part-body" />
+        <line x1="110" y1="100" x2="80" y2="125" class="body-part" id="part-arm-left" />
+        <line x1="110" y1="100" x2="140" y2="125" class="body-part" id="part-arm-right" />
+        <line x1="110" y1="140" x2="80" y2="180" class="body-part" id="part-leg-left" />
+        <line x1="110" y1="140" x2="140" y2="180" class="body-part" id="part-leg-right" />
+      </svg>
+    </div>
+
+    <div class="status-box">
+      <p>Mistakes: <span id="wrong-count">0</span> / 6</p>
+    </div>
+
+    <!-- Word Placeholder Display -->
+    <div id="word-display" class="word-display"></div>
+
+    <!-- On-Screen Keyboard -->
+    <div id="keyboard" class="keyboard"></div>
+
+    <button id="reset-btn" class="reset-btn">New Game</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
